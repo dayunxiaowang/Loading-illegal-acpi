@@ -1,0 +1,41 @@
+[Defines]
+  INF_VERSION                    = 0x00010019
+  BASE_NAME                      = LoadIvrs
+  FILE_GUID                      = 7cfb6a18-4f3b-4f8f-9d69-8d5a6f3a9b2e
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  LoadIvrs.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  LoadIvrsPkg/LoadIvrsPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  DevicePathLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  BaseLib
+  DebugLib
+  PrintLib
+  PcdLib
+
+[Protocols]
+  gEfiAcpiTableProtocolGuid                     ## CONSUMES
+  gEfiAcpiSdtProtocolGuid                       ## CONSUMES
+  gEfiSimpleFileSystemProtocolGuid              ## CONSUMES
+  gEfiLoadedImageProtocolGuid                   ## CONSUMES
+  gEfiPciIoProtocolGuid                         ## CONSUMES
+
+[Guids]
+  gEfiFileInfoGuid                              ## CONSUMES
+  gEfiAcpi20TableGuid                           ## PRODUCES
+  gEfiAcpiTableGuid                             ## PRODUCES
+
+

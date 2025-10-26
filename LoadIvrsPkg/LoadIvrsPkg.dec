@@ -1,0 +1,10 @@
+[Defines]
+  DEC_SPECIFICATION               = 0x00010019
+  PACKAGE_NAME                    = LoadIvrsPkg
+  PACKAGE_GUID                    = 4f4a3cf9-6b3d-45e3-9b3b-4b0fc0f7a8a2
+  PACKAGE_VERSION                 = 0.1
+
+[Includes]
+  Include
+
+
